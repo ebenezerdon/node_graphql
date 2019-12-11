@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/graphql', graphqlHTTP({
+router.use('/graphql', graphqlHTTP({
   schema,
   graphiql: true
 }));
