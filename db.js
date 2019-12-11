@@ -3,8 +3,8 @@ const db = {
     {
       author: "flyingturtle",
       slug: "5-amazing-math-tricks-flyingturtle",
-      firstName: null,
-      lastName: null,
+      firstusername: null,
+      lastusername: null,
       bio: null,
       imageUrl: null,
       title: "5 Amazing Math Tricks",
@@ -22,8 +22,8 @@ const db = {
     {
       author: "runningeagle",
       slug: "a-special-article-runningeagle",
-      firstName: null,
-      lastName: null,
+      firstusername: null,
+      lastusername: null,
       bio: null,
       imageUrl: null,
       title: "A Special Article",
@@ -39,8 +39,8 @@ const db = {
     {
       author: "runningeagle",
       slug: "a-simple-article-runningeagle",
-      firstName: null,
-      lastName: null,
+      firstusername: null,
+      lastusername: null,
       bio: null,
       imageUrl: null,
       title: "A Simple Article",
@@ -56,8 +56,8 @@ const db = {
     {
       author: "runningeagle",
       slug: "a-demo-article-runningeagle",
-      firstName: null,
-      lastName: null,
+      firstusername: null,
+      lastusername: null,
       bio: null,
       imageUrl: null,
       title: "A Demo Article",
@@ -73,8 +73,8 @@ const db = {
     {
       author: "runningeagle",
       slug: "is-this-final-runningeagle",
-      firstName: null,
-      lastName: null,
+      firstusername: null,
+      lastusername: null,
       bio: null,
       imageUrl: null,
       title: "Is This Final?",
@@ -90,8 +90,8 @@ const db = {
     {
       author: "runningeagle",
       slug: "great-ways-of-life-runningeagle",
-      firstName: null,
-      lastName: null,
+      firstusername: null,
+      lastusername: null,
       bio: null,
       imageUrl: null,
       title: "Great Ways of Life",
@@ -107,8 +107,8 @@ const db = {
     {
       author: "runningeagle",
       slug: "greatest-articles-of-all-time-runningeagle",
-      firstName: null,
-      lastName: null,
+      firstusername: null,
+      lastusername: null,
       bio: null,
       imageUrl: null,
       title: "Greatest Articles of All Time",
@@ -124,8 +124,8 @@ const db = {
     {
       author: "runningeagle",
       slug: "great-men-of-old-runningeagle",
-      firstName: null,
-      lastName: null,
+      firstusername: null,
+      lastusername: null,
       bio: null,
       imageUrl: null,
       title: "Great Men Of Old",
@@ -141,8 +141,8 @@ const db = {
     {
       author: "runningeagle",
       slug: "the-lifes-of-the-greats-runningeagle",
-      firstName: null,
-      lastName: null,
+      firstusername: null,
+      lastusername: null,
       bio: null,
       imageUrl: null,
       title: "The Lifes of The Greats",
@@ -158,8 +158,8 @@ const db = {
     {
       author: "runningeagle",
       slug: "the-article-cover-runningeagle",
-      firstName: null,
-      lastName: null,
+      firstusername: null,
+      lastusername: null,
       bio: null,
       imageUrl: null,
       title: "The Article Cover",
@@ -175,8 +175,8 @@ const db = {
     {
       author: "runningeagle",
       slug: "evolving-life-runningeagle",
-      firstName: null,
-      lastName: null,
+      firstusername: null,
+      lastusername: null,
       bio: null,
       imageUrl: null,
       title: "Evolving Life",
@@ -192,8 +192,8 @@ const db = {
     {
       author: "runningeagle",
       slug: "no-regrets-runningeagle",
-      firstName: null,
-      lastName: null,
+      firstusername: null,
+      lastusername: null,
       bio: null,
       imageUrl: null,
       title: "No Regrets",
@@ -209,8 +209,8 @@ const db = {
     {
       author: "runningeagle",
       slug: "the-judas-of-science-runningeagle",
-      firstName: null,
-      lastName: null,
+      firstusername: null,
+      lastusername: null,
       bio: null,
       imageUrl: null,
       title: "The Judas of Science",
@@ -226,8 +226,8 @@ const db = {
     {
       author: "runningeagle",
       slug: "an-article-to-behold-runningeagle",
-      firstName: null,
-      lastName: null,
+      firstusername: null,
+      lastusername: null,
       bio: null,
       imageUrl: null,
       title: "An Article to Behold",
@@ -244,12 +244,16 @@ const db = {
 
   authors: [
     {
-      name: "flyingturtle",
-      bio: "I catch birds when I run through mountains"
+      username: "flyingturtle",
+      bio: "I catch birds when I run through mountains",
+      country: "Nigeria"
     },
     {
-      name: "runningeagle",
-      bio: "I eat while I roll"
+      username: "runningeagle",
+      bio: "I eat while I roll",
+      country: "Nigeria"
     }
   ]
 };
+
+export default db;
