@@ -8,8 +8,7 @@ const db = {
       bio: null,
       imageUrl: null,
       title: "5 Amazing Math Tricks",
-      description:
-        "It's amazing how I never knew how to calculate this fast until I turned 30.",
+      description: "It's a beautiful day",
       category: "Mathematics",
       body:
         "<p>It's amazing how I never knew how to calculate this fast until I turned 30. It's amazing how I never knew how to calculate this fast until I turned 30. It's amazing how I never knew how to calculate this fast until I turned 30. It's amazing how I never knew how to calculate this fast until I turned 30. It's amazing how I never knew how to calculate this fast until I turned 30. It's amazing how I never knew how to calculate this fast until I turned 30.It's amazing how I never knew how to calculate this fast until I turned 30. It's amazing how I never knew how to calculate this fast until I turned 30. It's amazing how I never knew how to calculate this fast until I turned 30.</p>",
