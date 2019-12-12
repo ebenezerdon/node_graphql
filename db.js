@@ -32,7 +32,7 @@ const db = {
       body: "<p>A Special Article</p>",
       readTime: 1,
       coverImageUrl:
-        "https://res.cloudinary.com/hba821/image/upload/v1551263917/pw74fs3hoovhdyfc185x.jpg",
+        "https://res.cloudinary.com/hba821/image/upload/v1551211295/euws1xn36ym5nfeqepws.jpg",
       createdOn: "27 February 2019, 10:39AM",
       modifiedOn: "27 February 2019, 10:39AM"
     },
