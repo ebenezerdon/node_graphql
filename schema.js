@@ -1,6 +1,6 @@
-import graphql from 'graphql';
-import db from './db';
-const { GraphQLSchema, GraphQLObjectType, GraphQLString, GraphQLInt } = graphql;
+const graphql = require('graphql');
+const db = require('./db');
+const { GraphQLSchema, GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLList } = graphql;
 
 const authorType = new GraphQLObjectType({
   name: 'Author',
@@ -22,8 +22,8 @@ const articleType = new GraphQLObjectType({
   fields: {
     author: {
       type: authorType,
-      resolve: (source, params) => {
-        return db.authors.filter(author => source.username === author.username)
+      resolve: (source, {username}) => {
+        return db.authors.filter(author => username === author.username)
       }
     },
     slug: {
@@ -68,18 +68,27 @@ const articleType = new GraphQLObjectType({
   }
 });
 
-const schema = new GraphQLSchema({
-  query: new GraphQLObjectType({
-    name: 'RootQueryType',
-    fields: {
-      hello: {
-        type: GraphQLString,
-        resolve() {
-          return 'world'
-        }
+const queryType = new GraphQLObjectType({
+  name: 'Query',
+  fields: {
+    article: {
+      type: articleType,
+      args: {
+        slug: { type: GraphQLString }
+      },
+      resolve: (source, {slug}) => {
+        return db.articles.filter(article => slug === article.slug)
       }
+    },
+    articles: {
+      type: new GraphQLList(articleType),
+      resolve: () => db.articles
     }
-  })
+  }
 })
 
-export default schema;
+const schema = new GraphQLSchema({
+  query: queryType
+})
+
+module.exports = schema;
