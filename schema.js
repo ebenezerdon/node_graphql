@@ -8,6 +8,9 @@ const authorType = new GraphQLObjectType({
     name: {
       type: GraphQLString
     },
+    username: {
+      type: GraphQLString
+    },
     bio: {
       type: GraphQLString
     },
@@ -22,8 +25,8 @@ const articleType = new GraphQLObjectType({
   fields: {
     author: {
       type: authorType,
-      resolve: (source, {username}) => {
-        return db.authors.filter(author => username === author.username)
+      resolve: (source, params) => {
+        return db.authors.filter(author => source.author === author.username)[0]
       }
     },
     slug: {
@@ -77,12 +80,21 @@ const queryType = new GraphQLObjectType({
         slug: { type: GraphQLString }
       },
       resolve: (source, {slug}) => {
-        return db.articles.filter(article => slug === article.slug)
+        return db.articles.filter(article => slug === article.slug)[0]
       }
     },
     articles: {
       type: new GraphQLList(articleType),
       resolve: () => db.articles
+    },
+    author: {
+      type: authorType,
+      args: {
+        username: { type: GraphQLString }
+      },
+      resolve: (source, params) => {
+        return db.authors.filter(author => params.username === author.username)[0]
+      }
     }
   }
 })
