@@ -245,11 +245,13 @@ const db = {
   authors: [
     {
       username: "flyingturtle",
+      name: "Flying Turtle",
       bio: "I catch birds when I run through mountains",
       country: "Nigeria"
     },
     {
       username: "runningeagle",
+      name: "Running Eagle",
       bio: "I eat while I roll",
       country: "Nigeria"
     }
